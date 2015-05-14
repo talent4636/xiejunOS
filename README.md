@@ -1,4 +1,4 @@
-This is a whole pubic PHP-framework, and surely, include some base function.
+This is a whole public PHP-framework, and surely, include some base function.
 
 Now, xiejunOS looks simple and urgly, but someday, you know.....
 
