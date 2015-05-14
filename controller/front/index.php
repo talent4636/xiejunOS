@@ -6,8 +6,20 @@
 
 class controller_front_index extends controller{
 
+    public function __construct(){
+        parent:: __construct();
+    }
+
     public function index(){
-        exit('succ');
+        $member = array(
+            '1' => 'aaaaaaaaaa',
+            '2' => 'bbbbbbbbbb',
+            '3' => 'cccccccccc',
+            '4' => 'dddddddddd',
+            '5' => 'eeeeeeeeee',
+        );
+        $this->data('member',$member);
+        $this->display('front/index.html');
     }
 
 

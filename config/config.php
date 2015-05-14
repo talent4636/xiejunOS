@@ -12,3 +12,11 @@ define('CONFIG_DIR',ROOT_DIR.'/config');
 define('VIEW_DIR',ROOT_DIR.'/view');
 define('PLUGIN_DIR',ROOT_DIR.'/plugin');
 define('TMP_DIR',ROOT_DIR.'/templates');
+define('CACHE_DIR',ROOT_DIR.'/cache');
+
+//Smarty config
+define('SMARTY_CACHE', false);
+define('SMARTY_CACHE_TIME', 0);
+
+//site config
+define('SITE_TITLE','xiejun\'s');

@@ -13,15 +13,22 @@ class router{
             $className = 'controller_'.substr($trans,0,strpos($trans,'@'));
             $funcName = substr($trans,strpos($trans,'@')+1);
         }
-        $r = call_user_func_array(array(kernel::get_class($className),$funcName),(array)$trans['args']);
-        if($r){
-            return $r;
+        $arg = @count((array)$request['args']);
+        if ((int)$arg >0){
+            @call_user_func_array(array(kernel::get_class($className),$funcName),(array)$request['args']);
         }else {
-            exit("something wrong : call {$className} -> {$funcName} ( {$trans['args']} )");
+            @call_user_func_array(array(kernel::get_class($className),$funcName),array());
         }
+
+//        if($r){
+//            return $r;
+//        }else {
+//            exit("something wrong : call {$className} -> {$funcName} ( {$trans['args']} )");
+//        }
 
     }
 
+    //TODO read from config/router.php , not like this
     public static function router_list($key){
         //default  = [controller]
         $routerMap = array(

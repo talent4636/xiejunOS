@@ -10,8 +10,23 @@
  */
 class controller{
 
+    public $view;
+
+    public function __construct(){
+//        view::__construct();
+        $this->view = kernel::get_class('view');
+    }
+
     public function index(){
         //
+    }
+
+    public function display($dir){
+        $this->view->display($dir);
+    }
+
+    public function data($k,$v){
+        $this->view->set($k,$v);
     }
 
 }

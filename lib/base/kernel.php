@@ -21,14 +21,13 @@ class kernel{
                 require(dirname(__FILE__) . '/autoload.php');
                 spl_autoload_register('autoloader');
             }
-
             //require base controller/lib/model/router
             require(ROOT_DIR.'/controller/controller.php');
             require(ROOT_DIR.'/lib/lib.php');
             require(ROOT_DIR.'/model/model.php');
             require(ROOT_DIR.'/lib/base/router.php');
+            require(ROOT_DIR.'/lib/base/view.php');
             //end
-
             router::init();
 
         }catch(Exception $e){
