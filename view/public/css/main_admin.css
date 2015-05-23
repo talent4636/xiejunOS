@@ -1,0 +1,20 @@
+/**
+ * warning: i'm not good at style sheet.
+ * so this part is hard to me. -_-\\
+ */
+
+*{}
+html{}
+body{margin: 0 auto;}
+
+div{}
+
+.fr{float:right}
+.tar{text-align:right;}
+
+div.body{width:1200px;margin: 0 auto;}
+div.header,div.main,div.footer{width:1200px;float: left;border-left: 1px solid #9B410E;border-right:1px solid #9B410E;}
+div.header{width: 100%;height: 20px;border-bottom:1px solid #9B410E;}
+div.header span.top-mark{line-height:20px;padding:0 10px;}
+div.main{width: 100%;min-height: 600px;}
+div.footer{width: 100%;height: 200px;border-top:1px solid #9B410E;}
