@@ -30,12 +30,15 @@ class router{
 
     //TODO read from config/router.php , not like this
     public static function router_list($key){
+        require_once(ROOT_DIR.'/config/router.php');
+        return router_map($key);
+
         //default  = [controller]
-        $routerMap = array(
-            '/' => 'front_index@index',
-            '/index.php' => 'front_index@index',
-        );
-        return $routerMap[$key];
+//        $routerMap = array(
+//            '/' => 'front_index@index',
+//            '/index.php' => 'front_index@index',
+//        );
+//        return $routerMap[$key];
     }
 
     public static function get_request(){

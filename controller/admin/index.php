@@ -6,4 +6,12 @@
 
 class controller_admin_index extends controller{
 
+    public function __construct(){
+        kernel::get_class('lib_main_login')->check_login();
+    }
+
+    public function index(){
+        echo "admin";
+    }
+
 }

@@ -4,10 +4,14 @@
  *   date: 2015/5/14 9:34
  */
 
-function router($key){
+function router_map($key){
     $routerMap = array(
         '/' => 'front_index@index',
         '/index.php' => 'front_index@index',
+        'admin' => 'admin_index@index',
+        'admin_login' => 'admin_login@index',
+        'login' => 'front_login@login',
+        'register' => 'front_login@register',
     );
     return $routerMap[$key];
 }
