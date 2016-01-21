@@ -1,0 +1,7 @@
+
+/**后台登陆页的css，由于独立，单独写*/
+
+div.main_box{width: 900px;height: 300px;margin: 0 auto;border: 1px solid #9B410E;margin-top: 200px;}
+div.login_pic{width: 500px;height: 100%;overflow: hidden;float: left;}
+div.login_pic img{width: 100%;height: 100%;}
+div.login_table{width: 350px;padding: 25px;float: left;}

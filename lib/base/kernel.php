@@ -37,7 +37,8 @@ class kernel{
     }
 
     public static function get_class($class_name){
-        return @new $class_name;
+//        echo $class_name;
+        return new $class_name();
 
     }
 

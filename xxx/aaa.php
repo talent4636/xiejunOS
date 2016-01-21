@@ -11,3 +11,17 @@ function pe($params){
     die;
     exit;
 }
+
+function de($params){
+    echo "<pre>";
+    var_dump($params);
+    echo "</pre>";
+    die;
+    exit;
+}
+
+function elog($params,$mark,$file_name='log.log'){
+    error_log("\n============= {$mark} ==============\n".print_r($params,1),3,ROOT_DIR.'/logs/'.$file_name);
+    die;
+    exit;
+}

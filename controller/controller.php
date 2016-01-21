@@ -29,4 +29,9 @@ class controller{
         $this->view->set($k,$v);
     }
 
+    //
+    public function alert(){
+        //
+    }
+
 }

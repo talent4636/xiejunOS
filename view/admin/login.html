@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>管理员登陆</title>
+    <link href="<{$css_dir}>/admin_login.css" media="screen" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="main_box">
+    <div class="login_pic">
+        <img src="<{$image_dir}>/system/admin_login_pic.jpg">
+    </div>
+    <div class="login_table">
+        <form action="admin_login" id="login_form" method="post">
+            <table>
+                <caption>管理员登陆</caption>
+                <tr>
+                    <td>用户名</td>
+                    <th><input type="text" name="admin_user" /> </th>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <th><input type="password" name="admin_pass" /> </th>
+                </tr>
+                <tr>
+                    <td>验证码</td>
+                    <th><input type="text" name="admin_vcode" size="4"/> </th>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <th>
+                        <input type="submit" value="登陆">
+                        <input type="button" value="忘记密码">
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

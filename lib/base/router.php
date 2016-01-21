@@ -14,6 +14,7 @@ class router{
             $funcName = substr($trans,strpos($trans,'@')+1);
         }
         $arg = @count((array)$request['args']);
+//        controller_admin_login
         if ((int)$arg >0){
             @call_user_func_array(array(kernel::get_class($className),$funcName),(array)$request['args']);
         }else {
