@@ -14,7 +14,7 @@ class controller_admin_main_login extends controller{
             //varify username & password, login and jump
             $loginResult = kernel::get_class('lib_main_login')->login($_POST['admin_user'], $_POST['admin_pass'], $_POST['admin_vcode']);
             if($loginResult){
-                $this->view->display();
+                $this->view->display('admin/index.html');
             }else{
                 $this->view->popupMsg('登陆失败，请重新登陆');
             }
@@ -24,4 +24,4 @@ class controller_admin_main_login extends controller{
         }
     }
 
-}
+}//    ->splitDelivery(

@@ -13,7 +13,6 @@ class controller{
     public $view;
 
     public function __construct(){
-//        view::__construct();
         $this->view = kernel::get_class('view');
     }
 
@@ -33,5 +32,11 @@ class controller{
     public function alert(){
         //
     }
+
+    public function jumpto($url){
+        //
+    }
+
+//    public function
 
 }
