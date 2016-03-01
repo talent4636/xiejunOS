@@ -12,6 +12,10 @@
  */
 class model{
 
+    public $db;
 
+    function __constract(){
+        $this->db = kernel::database();
+    }
 
 }
