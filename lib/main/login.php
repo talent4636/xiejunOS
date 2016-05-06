@@ -11,19 +11,18 @@ class lib_main_login{
         $this->role = $session->get('role');
     }
 
-    public function check_login($user_name, $password, $vcode=""){
+    public function check_login(){
         if($this->user_name && $this->role){
-            exit('true');
             return true;
         }else{
-            exit('false');
             return false;
         }
     }
 
-    public function login($user_name, $password, $vcode=""){
+    //$user_name, $password, $vcode=""
+    public function login(){
         //varify first
-        if(self::check_login($user_name, $password, $vcode="")){
+        if(self::check_login()){
             //set session & cookie
             return true;
         }else{
@@ -32,7 +31,7 @@ class lib_main_login{
     }
 
     public function register(){
-
+        //
     }
     
 }
