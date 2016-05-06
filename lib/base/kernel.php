@@ -5,6 +5,8 @@
  */
 class kernel{
 
+    static $db;
+
     public static function init(){
         try{
             if(file_exists(ROOT_DIR.'/config/config.php')){
@@ -29,7 +31,6 @@ class kernel{
             require(ROOT_DIR.'/lib/base/view.php');
             //end
             router::init();
-
         }catch(Exception $e){
             //TODO
             exit($e);
@@ -37,9 +38,16 @@ class kernel{
     }
 
     public static function get_class($class_name){
-//        echo $class_name;
         return new $class_name();
+    }
 
+    //单例模式，database
+    static function database(){
+        if(!self::$db){
+            $db = kernel::get_class('base_db_connections');//base_db_connections
+            self::$db = $db;
+        }
+        return self::$db;
     }
 
 
