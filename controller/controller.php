@@ -21,11 +21,24 @@ class controller{
     }
 
     public function display($dir){
+        //for admin
+        if(!is_object($this->view)){
+            $this->view = kernel::get_class('view');
+        }
         $this->view->display($dir);
     }
 
     public function data($k,$v){
+        if(!is_object($this->view)){
+            $this->view = kernel::get_class('view');
+        }
         $this->view->set($k,$v);
+    }
+
+    public function multi_data($data){
+        foreach($data as $k => $v){
+            $this->data($k,$v);
+        }
     }
 
     //

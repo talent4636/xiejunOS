@@ -20,3 +20,7 @@ define('SMARTY_CACHE_TIME', 0);
 
 //site config
 define('SITE_TITLE','xiejun\'s');
+
+
+//system config
+define('DEBUG_PHP',false);//php调试模式

@@ -9,9 +9,10 @@ function router_map($key){
         '/' => 'front_index@index',
         '/index.php' => 'front_index@index',
         'admin' => 'admin_index@index',
-        'admin_login' => 'admin_main_login@index',
-        'login' => 'front_login@login',
-        'register' => 'front_login@register',
+        'setup' => '',//TODO
+//        'admin_login' => 'admin_main_login@index',
+//        'login' => 'front_login@login',
+//        'register' => 'front_login@register',
 //        'api' => 'api_index@index',
     );
     return $routerMap[$key];

@@ -1,0 +1,14 @@
+<div class="top_menu">
+    <ul>
+        <{foreach from=$_top_menu item=nav key=key}>
+        <li class="<{if $nav.active}>active<{/if}>">
+            <div class="">
+                <a href="">
+                    <!--<image class="icon" src=""></image>-->
+                    <span class="with-icon <{$nav.icon}>" >&nbsp;</span><span style=""><{$nav.name}></span>
+                </a>
+            </div>
+        </li>
+        <{/foreach}>
+    </ul>
+</div>

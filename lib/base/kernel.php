@@ -11,6 +11,11 @@ class kernel{
         try{
             if(file_exists(ROOT_DIR.'/config/config.php')){
                 require(ROOT_DIR . '/config/config.php');
+                if(defined('DEBUG_PHP') && DEBUG_PHP){
+                    if (!ini_get('display_errors')) {
+                        ini_set('display_errors', '1');
+                    }
+                }
             }
             if(file_exists(PLUGIN_DIR.'/smarty/Smarty.class.php')){
                 require(PLUGIN_DIR . '/smarty/Smarty.class.php');
@@ -33,6 +38,7 @@ class kernel{
             router::init();
         }catch(Exception $e){
             //TODO
+//            var_dump($e);exit;
             exit($e);
         }
     }
@@ -48,6 +54,11 @@ class kernel{
             self::$db = $db;
         }
         return self::$db;
+    }
+
+    //拼接url，根据key  eg. $key = ""
+    static function url($key){
+        //
     }
 
 
